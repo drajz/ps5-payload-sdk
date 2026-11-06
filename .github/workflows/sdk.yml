@@ -48,14 +48,14 @@ jobs:
         bash samples/hello_cmake/build.sh
 
     - name: Upload SDK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: SDK
         path: ./ps5-payload-sdk.tar.gz
         if-no-files-found: error
 
     - name: Upload payload
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Payload binaries
         path: ./**/*.elf
